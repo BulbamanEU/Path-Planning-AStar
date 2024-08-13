@@ -220,6 +220,7 @@ def main(window, width):
                     else:
                         draw_heap_path(path, grid)
 
+
                     #algorithm(lambda: draw(window, grid, ROWS, width), grid, start, end)
 
                 if event.key == pygame.K_r:

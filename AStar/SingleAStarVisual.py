@@ -86,7 +86,6 @@ def construct_path(came_from, current, draw):
         current.make_path()
         draw()
 
-#def check_if_possible():
 
 
 def runtime_calculator(func):
@@ -185,9 +184,18 @@ def draw(window, grid, rows, width):
 def get_clicked_pos(pos, rows, width):
     gap = width // rows
     y, x = pos
+    if y >= width:
+        y = width-1
+    elif y < 0:
+        y = 0
+    if x >= width:
+        x = width-1
+    elif x < 0:
+        x = 0
 
     row = y // gap
     col = x // gap
+
     return row, col
 
 def main(window, width):

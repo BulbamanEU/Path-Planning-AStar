@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pathFinding.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AStar/AStar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AStar/DrawType.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AStar/Grid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AStar/MultiAStarVisual.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AStar/heapAStarVisual.py" afterDir="false" />
+    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="A* path finding algorithm visualization using heap sorting">
+      <change afterPath="$PROJECT_DIR$/AStar/3dAStar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AStar/MultiAStar/moving_collision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pathFinding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pathFinding.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/AStar.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/AStar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/DrawType.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/tkinterGrid/DrawType.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/Grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/tkinterGrid/Grid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/MultiAStarVisual.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/heapAStarVisual.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/heapAStarVisual.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +33,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BulbamanEU&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="5805204e-116d-4a48-8759-56e85dbb80bd" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/BulbamanEU/pathFinding&quot;,
+    &quot;accountId&quot;: &quot;5805204e-116d-4a48-8759-56e85dbb80bd&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -45,27 +59,81 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.3dAStar.executor": "Run",
     "Python.AStar.executor": "Run",
+    "Python.AStar3D.executor": "Run",
     "Python.AStarPygame.executor": "Run",
     "Python.AStarTest.executor": "Run",
     "Python.AStarVisual.executor": "Run",
+    "Python.BLENDER_multi.executor": "Run",
+    "Python.CBS.executor": "Run",
+    "Python.CBS_GPT.executor": "Run",
+    "Python.ChatGPTTRY.executor": "Run",
     "Python.DrawType.executor": "Run",
+    "Python.ECBS+GPT.executor": "Run",
+    "Python.FCL.executor": "Run",
+    "Python.GPT_testings.executor": "Run",
     "Python.Grid.executor": "Run",
+    "Python.ILP_CBS.executor": "Run",
+    "Python.ILP_GPT.executor": "Run",
+    "Python.ILP_GPT_2.0.executor": "Run",
+    "Python.MultiAStarVisual.executor": "Run",
+    "Python.Octree.executor": "Run",
+    "Python.PulpGPT.executor": "Run",
+    "Python.SPARS.executor": "Run",
+    "Python.SPARS2.0.executor": "Run",
+    "Python.SPARSnew.executor": "Run",
     "Python.SingleAStarVisual.executor": "Run",
+    "Python.UnlabelledPlanner.executor": "Run",
+    "Python.VPython_visualizer.executor": "Run",
+    "Python.another.executor": "Run",
+    "Python.bubbles.executor": "Run",
+    "Python.check collision.executor": "Run",
+    "Python.collision_roadmap.executor": "Run",
+    "Python.constraints_test.executor": "Run",
+    "Python.geminiSPARS.executor": "Run",
+    "Python.git3dAStar.executor": "Run",
+    "Python.heapAStarVisual.executor": "Run",
+    "Python.moving_collision.executor": "Run",
+    "Python.octree with matplotlib.executor": "Run",
+    "Python.octreeAStar.executor": "Run",
+    "Python.octreeBOOM.executor": "Run",
+    "Python.octree_testing_internet.executor": "Run",
+    "Python.open3x.executor": "Run",
+    "Python.pyvista_test.executor": "Run",
+    "Python.quadraticProgram.executor": "Run",
+    "Python.svm.executor": "Run",
     "Python.test.executor": "Run",
-    "Python.testing.executor": "Debug",
+    "Python.test_ompl.executor": "Run",
+    "Python.test_open3d.executor": "Run",
+    "Python.testing.executor": "Run",
+    "Python.trying.executor": "Run",
+    "Python.visualizer.executor": "Run",
+    "Python.wtf.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Gintas/Documents/MANO IT/pathFinding/AStar"
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Gintas/Documents/MANO IT/pathFinding",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\tkinterGrid" />
     </key>
   </component>
   <component name="RunManager">
@@ -82,7 +150,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AStar/Grid.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\tkinterGrid\Grid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,9 +181,78 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="SPARS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pathFinding" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar\SPARS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SPARS2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pathFinding" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AStar/MultiAStar/SPARS2.0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="octree_testing_internet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pathFinding" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AStar/MultiAStar/octree_testing_internet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Grid" />
+        <item itemvalue="Python.octree_testing_internet" />
+        <item itemvalue="Python.SPARS2.0" />
+        <item itemvalue="Python.SPARS" />
         <item itemvalue="Python.Grid" />
       </list>
     </recent_temporary>
@@ -123,7 +260,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -136,6 +273,108 @@
       <option name="presentableId" value="Default" />
       <updated>1719935761165</updated>
     </task>
+    <task id="LOCAL-00001" summary="Project files">
+      <option name="closed" value="true" />
+      <created>1720097327633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720097327633</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Visual representation for A* path finding algorithm using PriorityQueue">
+      <option name="closed" value="true" />
+      <created>1720097372068</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720097372068</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Project for working with multiple moving agents with collision avoidance using A* algorithm">
+      <option name="closed" value="true" />
+      <created>1720097427147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720097427147</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First try creating window with grid using tinker for A* visualization">
+      <option name="closed" value="true" />
+      <created>1720097489803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720097489803</updated>
+    </task>
+    <task id="LOCAL-00005" summary="A* path finding algorithm using heap sorting">
+      <option name="closed" value="true" />
+      <created>1720097513141</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720097513141</updated>
+    </task>
+    <task id="LOCAL-00006" summary="A* path finding algorithm visualization using heap sorting">
+      <option name="closed" value="true" />
+      <created>1720097530860</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720097530860</updated>
+    </task>
+    <task id="LOCAL-00007" summary="A* path finding algorithm visualization using heap sorting">
+      <option name="closed" value="true" />
+      <created>1720098450025</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720098450025</updated>
+    </task>
+    <task id="LOCAL-00008" summary="A* path finding algorithm visualization using heap sorting">
+      <option name="closed" value="true" />
+      <created>1720099180423</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720099180423</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project files" />
+    <MESSAGE value="Visual representation for A* path finding algorithm using PriorityQueue" />
+    <MESSAGE value="Project for working with multiple moving agents with collision avoidance using A* algorithm" />
+    <MESSAGE value="First try creating window with grid using tinker for A* visualization" />
+    <MESSAGE value="A* path finding algorithm using heap sorting" />
+    <MESSAGE value="A* path finding algorithm visualization using heap sorting" />
+    <option name="LAST_COMMIT_MESSAGE" value="A* path finding algorithm visualization using heap sorting" />
   </component>
 </project>
