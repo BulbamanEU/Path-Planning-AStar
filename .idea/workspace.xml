@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="A* path finding algorithm visualization using heap sorting">
-      <change afterPath="$PROJECT_DIR$/AStar/3dAStar.py" afterDir="false" />
+    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Updated scripts for controlling blender environment, finding paths and visualizing.">
       <change afterPath="$PROJECT_DIR$/AStar/MultiAStar/moving_collision.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pathFinding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pathFinding.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blender_scripts/get_coordinates.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/AStar.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/AStar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/DrawType.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/tkinterGrid/DrawType.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/Grid.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/tkinterGrid/Grid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/MultiAStarVisual.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AStar/heapAStarVisual.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/heapAStarVisual.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/AStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/planAStar3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/draw_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/draw_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/get_coords.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/main_combined.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -65,6 +63,7 @@
     "Python.AStarPygame.executor": "Run",
     "Python.AStarTest.executor": "Run",
     "Python.AStarVisual.executor": "Run",
+    "Python.Agent_spawn.executor": "Run",
     "Python.BLENDER_multi.executor": "Run",
     "Python.CBS.executor": "Run",
     "Python.CBS_GPT.executor": "Run",
@@ -89,6 +88,7 @@
     "Python.another.executor": "Run",
     "Python.bubbles.executor": "Run",
     "Python.check collision.executor": "Run",
+    "Python.collision.executor": "Run",
     "Python.collision_roadmap.executor": "Run",
     "Python.constraints_test.executor": "Run",
     "Python.geminiSPARS.executor": "Run",
@@ -102,12 +102,15 @@
     "Python.open3x.executor": "Run",
     "Python.pyvista_test.executor": "Run",
     "Python.quadraticProgram.executor": "Run",
+    "Python.quick_test.executor": "Run",
+    "Python.singleAStar.executor": "Run",
     "Python.svm.executor": "Run",
     "Python.test.executor": "Run",
     "Python.test_ompl.executor": "Run",
     "Python.test_open3d.executor": "Run",
     "Python.testing.executor": "Run",
     "Python.trying.executor": "Run",
+    "Python.trying_collision.executor": "Run",
     "Python.visualizer.executor": "Run",
     "Python.wtf.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -115,7 +118,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Gintas/Documents/MANO IT/pathFinding",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -130,6 +133,7 @@
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\3D_AStar" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
@@ -137,28 +141,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Grid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pathFinding" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\tkinterGrid\Grid.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Grid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pathFinding" />
       <option name="ENV_FILES" value="" />
@@ -181,28 +163,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="SPARS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pathFinding" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar\SPARS.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="SPARS2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pathFinding" />
       <option name="ENV_FILES" value="" />
@@ -217,6 +177,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AStar/MultiAStar/SPARS2.0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SPARS3D" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pathFinding" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar\SPARS3D.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -249,10 +231,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Grid" />
         <item itemvalue="Python.octree_testing_internet" />
         <item itemvalue="Python.SPARS2.0" />
-        <item itemvalue="Python.SPARS" />
+        <item itemvalue="Python.SPARS3D" />
         <item itemvalue="Python.Grid" />
       </list>
     </recent_temporary>
@@ -337,10 +318,73 @@
       <option name="project" value="LOCAL" />
       <updated>1720099180423</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cleaning up project files, editing minor details">
+      <option name="closed" value="true" />
+      <created>1723534544600</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723534544600</updated>
+    </task>
+    <task id="LOCAL-00010" summary="AStar path planning in 3D space.">
+      <option name="closed" value="true" />
+      <created>1723535891335</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723535891335</updated>
+    </task>
+    <task id="LOCAL-00011" summary="AStar path planning in 3D space in Blender.">
+      <option name="closed" value="true" />
+      <created>1723535997207</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723535997207</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Bugs in Blender with imports, so all files in main.">
+      <option name="closed" value="true" />
+      <created>1723536122943</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723536122943</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Trying scripts to detect collision for CBS implementation and collision avoidance.">
+      <option name="closed" value="true" />
+      <created>1723537825436</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723537825436</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated scripts for controlling blender environment, finding paths and visualizing.">
+      <option name="closed" value="true" />
+      <created>1724062062648</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724062062648</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -360,6 +404,13 @@
                       </list>
                     </value>
                   </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
               </option>
             </State>
@@ -375,6 +426,12 @@
     <MESSAGE value="First try creating window with grid using tinker for A* visualization" />
     <MESSAGE value="A* path finding algorithm using heap sorting" />
     <MESSAGE value="A* path finding algorithm visualization using heap sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="A* path finding algorithm visualization using heap sorting" />
+    <MESSAGE value="Cleaning up project files, editing minor details" />
+    <MESSAGE value="AStar path planning in 3D space." />
+    <MESSAGE value="AStar path planning in 3D space in Blender." />
+    <MESSAGE value="Bugs in Blender with imports, so all files in main." />
+    <MESSAGE value="Trying scripts to detect collision for CBS implementation and collision avoidance." />
+    <MESSAGE value="Updated scripts for controlling blender environment, finding paths and visualizing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated scripts for controlling blender environment, finding paths and visualizing." />
   </component>
 </project>
