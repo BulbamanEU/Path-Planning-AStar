@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Updated scripts for controlling blender environment, finding paths and visualizing.">
-      <change afterPath="$PROJECT_DIR$/AStar/MultiAStar/moving_collision.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/get_coordinates.py" afterDir="false" />
+    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Collision for ellipsoids while moving.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/heapAStarVisual.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/heapAStarVisual.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/AStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/planAStar3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AStar/3D_AStar/AStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/3D_AStar/AStar3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/Agent_spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/Agent_spawn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blender_scripts/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/animation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/draw_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/draw_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/get_coords.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/main_combined.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/collision_while_moving.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/collision_while_moving.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/random_start_end.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/random_start_end.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/remove_past_paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/remove_collection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -55,77 +55,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.3dAStar.executor": "Run",
-    "Python.AStar.executor": "Run",
-    "Python.AStar3D.executor": "Run",
-    "Python.AStarPygame.executor": "Run",
-    "Python.AStarTest.executor": "Run",
-    "Python.AStarVisual.executor": "Run",
-    "Python.Agent_spawn.executor": "Run",
-    "Python.BLENDER_multi.executor": "Run",
-    "Python.CBS.executor": "Run",
-    "Python.CBS_GPT.executor": "Run",
-    "Python.ChatGPTTRY.executor": "Run",
-    "Python.DrawType.executor": "Run",
-    "Python.ECBS+GPT.executor": "Run",
-    "Python.FCL.executor": "Run",
-    "Python.GPT_testings.executor": "Run",
-    "Python.Grid.executor": "Run",
-    "Python.ILP_CBS.executor": "Run",
-    "Python.ILP_GPT.executor": "Run",
-    "Python.ILP_GPT_2.0.executor": "Run",
-    "Python.MultiAStarVisual.executor": "Run",
-    "Python.Octree.executor": "Run",
-    "Python.PulpGPT.executor": "Run",
-    "Python.SPARS.executor": "Run",
-    "Python.SPARS2.0.executor": "Run",
-    "Python.SPARSnew.executor": "Run",
-    "Python.SingleAStarVisual.executor": "Run",
-    "Python.UnlabelledPlanner.executor": "Run",
-    "Python.VPython_visualizer.executor": "Run",
-    "Python.another.executor": "Run",
-    "Python.bubbles.executor": "Run",
-    "Python.check collision.executor": "Run",
-    "Python.collision.executor": "Run",
-    "Python.collision_roadmap.executor": "Run",
-    "Python.constraints_test.executor": "Run",
-    "Python.geminiSPARS.executor": "Run",
-    "Python.git3dAStar.executor": "Run",
-    "Python.heapAStarVisual.executor": "Run",
-    "Python.moving_collision.executor": "Run",
-    "Python.octree with matplotlib.executor": "Run",
-    "Python.octreeAStar.executor": "Run",
-    "Python.octreeBOOM.executor": "Run",
-    "Python.octree_testing_internet.executor": "Run",
-    "Python.open3x.executor": "Run",
-    "Python.pyvista_test.executor": "Run",
-    "Python.quadraticProgram.executor": "Run",
-    "Python.quick_test.executor": "Run",
-    "Python.singleAStar.executor": "Run",
-    "Python.svm.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test_ompl.executor": "Run",
-    "Python.test_open3d.executor": "Run",
-    "Python.testing.executor": "Run",
-    "Python.trying.executor": "Run",
-    "Python.trying_collision.executor": "Run",
-    "Python.visualizer.executor": "Run",
-    "Python.wtf.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Gintas/Documents/MANO IT/pathFinding",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.3dAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStar3D.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStarPygame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStarTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Agent_spawn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BLENDER_multi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CBS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CBS_GPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ChatGPTTRY.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DrawType.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ECBS+GPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FCL.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GPT_testings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Grid.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ILP_CBS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ILP_GPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ILP_GPT_2.0.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MultiAStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Octree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PulpGPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SPARS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SPARS2.0.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SPARSnew.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SingleAStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.UnlabelledPlanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VPython_visualizer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.another.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bubbles.executor&quot;: &quot;Run&quot;,
+    &quot;Python.check collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collision_roadmap.executor&quot;: &quot;Run&quot;,
+    &quot;Python.constraints_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.geminiSPARS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.git3dAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.heapAStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.moving_collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octree with matplotlib.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octreeAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octreeBOOM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octree_testing_internet.executor&quot;: &quot;Run&quot;,
+    &quot;Python.open3x.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pyvista_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quadraticProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quick_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.singleAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.svm.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_ompl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_open3d.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trying.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trying_collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualizer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wtf.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gintas/Documents/MANO IT/pathFinding&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
@@ -139,104 +139,6 @@
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\tkinterGrid" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="Grid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pathFinding" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\Grid.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SPARS2.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pathFinding" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AStar/MultiAStar/SPARS2.0.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="SPARS3D" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pathFinding" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar\SPARS3D.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="octree_testing_internet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pathFinding" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AStar/MultiAStar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AStar/MultiAStar/octree_testing_internet.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.octree_testing_internet" />
-        <item itemvalue="Python.SPARS2.0" />
-        <item itemvalue="Python.SPARS3D" />
-        <item itemvalue="Python.Grid" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -366,7 +268,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724062062648</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Editing for a better look">
+      <option name="closed" value="true" />
+      <created>1724065603089</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724065603089</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Collision for ellipsoids while moving.">
+      <option name="closed" value="true" />
+      <created>1724160686159</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724160686159</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -432,6 +350,18 @@
     <MESSAGE value="Bugs in Blender with imports, so all files in main." />
     <MESSAGE value="Trying scripts to detect collision for CBS implementation and collision avoidance." />
     <MESSAGE value="Updated scripts for controlling blender environment, finding paths and visualizing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated scripts for controlling blender environment, finding paths and visualizing." />
+    <MESSAGE value="Editing for a better look" />
+    <MESSAGE value="Collision for ellipsoids while moving." />
+    <option name="LAST_COMMIT_MESSAGE" value="Collision for ellipsoids while moving." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AStar/3D_AStar/collision.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

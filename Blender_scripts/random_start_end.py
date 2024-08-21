@@ -1,9 +1,6 @@
 import bpy
 import random
 
-num_agents = 100
-
-
 def create_material(material_name, color):
     if material_name in bpy.data.materials:
         material = bpy.data.materials[material_name]
@@ -14,8 +11,8 @@ def create_material(material_name, color):
     material.diffuse_color = color + (1.0,)
 
 
-def random_points(n):
-    rnge = 200
+def random_points(n, rnge):
+    rnge = rnge
 
     location = (random.randint(0, rnge), random.randint(0, rnge), random.randint(0, rnge))
     bpy.ops.mesh.primitive_uv_sphere_add(location=location)
@@ -34,11 +31,3 @@ def random_points(n):
     material = bpy.data.materials.get("end")
     if material:
         end.data.materials.append(material)
-
-
-for material_name, color in [("start", (0, 1, 0)), ("end", (1, 0, 0))]:
-    if material_name not in bpy.data.materials:
-        create_material(material_name, color)
-
-for i in range(num_agents):
-    random_points(i + 1)

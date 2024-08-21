@@ -1,6 +1,6 @@
 import bpy
 
-def delete_paths(collection_name):
+def delete_collection(collection_name):
     collection = bpy.data.collections.get(collection_name)
 
     if collection is None:

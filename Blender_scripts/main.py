@@ -1,5 +1,5 @@
 import bpy
-from remove_past_paths import delete_paths
+from remove_collection import delete_collection
 from planAStar3D import AStar3D
 from get_coordinates import get_coords
 from draw_path import draw_path
@@ -13,7 +13,7 @@ def main():
     collision_cords = []
     obstacles = []
 
-    delete_paths("Paths")
+    delete_collection("Paths")
 
     start, goal = get_coords()
 

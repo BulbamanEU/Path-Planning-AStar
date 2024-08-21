@@ -94,15 +94,6 @@ class AStar3D:
         return
 
 
-# path cutting
-# check the path if it is possible to shorten it by skipping some points and going straight to the end or closer to the end
-
-# need a way for multi agent path planning
-# CBS with A* maybe
-# find every agent path with A* then check for collisions and replan paths if needed
-# ILP or MILP but idk ar jie computationaly viable butu
-
-
 collision_cords = []
 obstacles = []
 

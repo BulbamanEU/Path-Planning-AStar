@@ -1,7 +1,9 @@
 import bpy
 
 start_frame = 1
-end_frame = 200
+end_frame = 100
+
+max_speed = 50
 
 def no_rotation(n):
     agent_name = f'Agent{n}'
