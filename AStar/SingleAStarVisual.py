@@ -1,5 +1,4 @@
 import pygame
-import math
 from queue import PriorityQueue
 import time
 from functools import wraps
@@ -16,7 +15,8 @@ PINK = (248, 131, 121)
 WIDTH = 800
 WINDOW = pygame.display.set_mode((WIDTH, WIDTH))
 
-class Cell():
+
+class Cell:
     def __init__(self, row, col, width, total_rows):
         self.row = row
         self.col = col
@@ -26,6 +26,7 @@ class Cell():
         self.color = WHITE
         self.neighbors = []
         self.total_rows = total_rows
+        self.type = "open"
 
     def get_pos(self):
         return self.row, self.col
@@ -43,7 +44,7 @@ class Cell():
         return self.color == ORANGE
 
     def is_barrier(self):
-        return self.color == GREY
+        return self.type == "obstacle"
 
     def is_open(self):
         return self.color == PINK
@@ -56,6 +57,7 @@ class Cell():
 
     def make_barrier(self):
         self.color = GREY
+        self.type = "obstacle"
 
     def make_closed(self):
         self.color = ORANGE
@@ -87,7 +89,6 @@ def construct_path(came_from, current, draw):
         draw()
 
 
-
 def runtime_calculator(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -98,6 +99,7 @@ def runtime_calculator(func):
         print(f"Function '{func.__name__}' took {runtime:.4f} seconds to execute.")
         return result
     return wrapper
+
 
 @runtime_calculator
 def algorithm(draw, grid, start, end):
@@ -147,10 +149,12 @@ def algorithm(draw, grid, start, end):
 
     return False
 
+
 def h(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
     return abs(x1 - x2) + abs(y1 - y2)
+
 
 def make_grid(rows, width):
     grid = []
@@ -163,12 +167,14 @@ def make_grid(rows, width):
 
     return grid
 
+
 def draw_grid(window, rows, width):
     gap = width // rows
     for i in range(rows):
         pygame.draw.line(window, BLACK, (0, i*gap), (width, i*gap))
         for j in range(rows):
             pygame.draw.line(window, BLACK, (j*gap, 0), (j*gap, width))
+
 
 def draw(window, grid, rows, width):
     window.fill(WHITE)
@@ -197,6 +203,7 @@ def get_clicked_pos(pos, rows, width):
     col = x // gap
 
     return row, col
+
 
 def main(window, width):
     ROWS = 80
@@ -249,13 +256,9 @@ def main(window, width):
                     end = None
                     grid = make_grid(ROWS, width)
 
-
         draw(window, grid, ROWS, width)
 
     pygame.quit()
 
 
 main(WINDOW, WIDTH)
-
-
-

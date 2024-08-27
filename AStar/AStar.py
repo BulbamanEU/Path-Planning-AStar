@@ -1,21 +1,26 @@
-# Python program for A* Search Algorithm
-import math
 import heapq
 
-class heap_Cell:
-    def __init__(self):
-        self.parent_i = 0
-        self.parent_j = 0
-        self.f = float('inf')
-        self.g = float('inf')
-        self.h = 0
+ROW = 9
+COL = 9
+
+
+class Cell:
+    def __init__(self, parent_i=0, parent_j=0, f=float("inf"), g=float("inf"), h=0, i=0, j=0, parent=None):
+        self.parent_i = parent_i
+        self.parent_j = parent_j
+        self.parent = parent
+        self.f = f
+        self.g = g
+        self.h = h
+        self.i = i
+        self.j = j
+
+    def __lt__(self, other):
+        return self.f < other.f
 
 def calculate_h_value(row, col, dest):
     return ((row - dest[0]) ** 2 + (col - dest[1]) ** 2) ** 0.5
 
-
-ROW = 80
-COL = 80
 
 def is_valid(row, col):
     return (row >= 0) and (row < ROW) and (col >= 0) and (col < COL)
@@ -26,20 +31,15 @@ def is_unblocked(grid, row, col):
 def is_destination(row, col, dest):
     return row == dest[0] and col == dest[1]
 
-def trace_path(cell_details, dest):
+def trace_path(cell, src):
     print("The Path is ")
     path = []
-    row = dest[0]
-    col = dest[1]
 
-    while not (cell_details[row][col].parent_i == row and cell_details[row][col].parent_j == col):
-        path.append((row, col))
-        temp_row = cell_details[row][col].parent_i
-        temp_col = cell_details[row][col].parent_j
-        row = temp_row
-        col = temp_col
+    while cell.parent:
+        path.append((cell.i, cell.j))
+        cell = cell.parent
 
-    path.append((row, col))
+    path.append((src[0], src[1]))
     path.reverse()
 
     for i in path:
@@ -49,40 +49,37 @@ def trace_path(cell_details, dest):
 
 
 def a_star_search(grid, src, dest):
+    print("searching...")
+
     if not is_valid(src[0], src[1]) or not is_valid(dest[0], dest[1]):
-        print("Source or destination is invalid")
+        print("Source or destination is invalid.")
         return
 
     if not is_unblocked(grid, src[0], src[1]) or not is_unblocked(grid, dest[0], dest[1]):
-        print("Source or the destination is blocked")
+        print("Source or the destination is an obstacle.")
         return
 
     if is_destination(src[0], src[1], dest):
-        print("We are already at the destination")
+        print("We are already at the destination.")
         return
 
-    closed_list = [[False for _ in range(COL)] for _ in range(ROW)]
-    cell_details = [[heap_Cell() for _ in range(COL)] for _ in range(ROW)]
+    closed_list = []
 
-    i = src[0]
-    j = src[1]
-    cell_details[i][j].f = 0
-    cell_details[i][j].g = 0
-    cell_details[i][j].h = 0
-    cell_details[i][j].parent_i = i
-    cell_details[i][j].parent_j = j
+    start_cell = Cell(f=0, g=0)
+    start_cell.i = src[0]
+    start_cell.j = src[1]
 
     open_list = []
-    heapq.heappush(open_list, (0.0, i, j))
+    heapq.heappush(open_list, start_cell)
 
     found_dest = False
 
-    while len(open_list) > 0:
+    while open_list:
         p = heapq.heappop(open_list)
 
-        i = p[1]
-        j = p[2]
-        closed_list[i][j] = True
+        i = p.i
+        j = p.j
+        closed_list.append((p.i, p.j))
 
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
                       #(1, 1), (1, -1), (-1, 1), (-1, -1)]
@@ -90,28 +87,27 @@ def a_star_search(grid, src, dest):
             new_i = i + dir[0]
             new_j = j + dir[1]
 
-            if is_valid(new_i, new_j) and is_unblocked(grid, new_i, new_j) and not closed_list[new_i][new_j]:
+            if is_valid(new_i, new_j) and is_unblocked(grid, new_i, new_j) and (new_i, new_j) not in closed_list:
+                cur_cell = Cell(parent_i=i, parent_j=j, i=new_i, j=new_j, parent=p)
                 if is_destination(new_i, new_j, dest):
-                    cell_details[new_i][new_j].parent_i = i
-                    cell_details[new_i][new_j].parent_j = j
                     txt = "found"
-                    path = trace_path(cell_details, dest)
+                    path = trace_path(cur_cell, src)
                     found_dest = True
                     return path, txt
                 else:
-                    g_new = cell_details[i][j].g + 1.0
+                    g_new = p.g + 1.0
                     h_new = calculate_h_value(new_i, new_j, dest)
                     f_new = g_new + h_new
 
-                    if cell_details[new_i][new_j].f == float('inf') or cell_details[new_i][new_j].f > f_new:
-                        heapq.heappush(open_list, (f_new, new_i, new_j))
-                        cell_details[new_i][new_j].f = f_new
-                        cell_details[new_i][new_j].g = g_new
-                        cell_details[new_i][new_j].h = h_new
-                        cell_details[new_i][new_j].parent_i = i
-                        cell_details[new_i][new_j].parent_j = j
-
+                    if cur_cell.f == float('inf') or cur_cell.f > f_new:
+                        heapq.heappush(open_list, cur_cell)
+                        cur_cell.f = f_new
+                        cur_cell.g = g_new
+                        cur_cell.h = h_new
+                        cur_cell.parent_i = i
+                        cur_cell.parent_j = j
     if not found_dest:
+        print("Destination is blocked")
         return "inf", "Failed"
 
 def main():
@@ -120,10 +116,10 @@ def main():
         [1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
         [1, 1, 1, 0, 1, 1, 1, 0, 1, 1],
         [1, 1, 1, 0, 1, 1, 0, 1, 0, 1],
-        [0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+        [1, 0, 1, 0, 1, 0, 0, 0, 0, 0],
         [1, 1, 1, 0, 1, 1, 1, 0, 1, 0],
-        [1, 0, 1, 1, 1, 1, 0, 0, 0, 0],
-        [1, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+        [1, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+        [1, 0, 1, 0, 0, 1, 1, 1, 1, 1],
         [1, 0, 1, 1, 1, 1, 0, 0, 0, 1],
         [1, 1, 1, 0, 0, 0, 1, 0, 0, 1]
     ]

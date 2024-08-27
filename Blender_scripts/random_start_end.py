@@ -12,17 +12,6 @@ def create_material(material_name, color):
 
 
 def random_points(n, rnge):
-    rnge = rnge
-
-    location = (random.randint(0, rnge), random.randint(0, rnge), random.randint(0, rnge))
-    bpy.ops.mesh.primitive_uv_sphere_add(location=location)
-    start = bpy.context.object
-    start.name = f"start{n}"
-
-    material = bpy.data.materials.get("start")
-    if material:
-        start.data.materials.append(material)
-
     location = (random.randint(0, rnge), random.randint(0, rnge), random.randint(0, rnge))
     bpy.ops.mesh.primitive_uv_sphere_add(location=location)
     end = bpy.context.object
@@ -31,3 +20,15 @@ def random_points(n, rnge):
     material = bpy.data.materials.get("end")
     if material:
         end.data.materials.append(material)
+        
+    
+    location = (random.randint(0, rnge), random.randint(0, rnge), random.randint(0, rnge))
+    bpy.ops.mesh.primitive_uv_sphere_add(location=location)
+    start = bpy.context.object
+    start.name = f"start{n}"
+
+    material = bpy.data.materials.get("start")
+    if material:
+        start.data.materials.append(material)
+        
+    return location

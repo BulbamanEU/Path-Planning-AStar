@@ -14,12 +14,13 @@ def delete_environment():
 
 
 def new_environment():
+    agents = []
     for material_name, color in [("start", (0, 1, 0)), ("end", (1, 0, 0))]:
         if material_name not in bpy.data.materials:
             create_material(material_name, color)
 
     for n in range(1, num_agents + 1):
-        random_points(n, rnge)
+        loc = random_points(n, rnge)
         create_ellipsoid((0, 0, 0), (x_scale, y_scale, z_scale), n)
 
 
@@ -29,3 +30,5 @@ z_scale = 2
 
 delete_environment()
 new_environment()
+
+
