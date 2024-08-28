@@ -1,6 +1,7 @@
 import bpy
 import json
 
+
 class Agent:
     def __init__(self, name, path=None, obstacles=None):
         self.name = name
@@ -22,6 +23,7 @@ class Agent:
             obstacles=data.get('obstacles', [])
         )
 
+
 def create_ellipsoid(location, scale, n):
     bpy.ops.mesh.primitive_uv_sphere_add(location=location)
 
@@ -30,23 +32,23 @@ def create_ellipsoid(location, scale, n):
     obj.scale = scale
     obj.name = f"Agent{n}"
 
-def save_agent_to_json(agent, filename):
-    agent_data = agent.to_dict()
-    try:
-        with open(filename, 'a') as file:
-            json.dump(agent_data, file)
-            file.write('\n')
-    except IOError as e:
-        print(f"An error occurred: {e}")
 
-def load_agents_from_json(filename):
+def save_agents(agents, file_path):
+
+    with open(file_path, 'w') as f:
+        for agent in agents:
+            agent_data = agent.to_dict()
+            json.dump(agent_data, f)
+            f.write('\n')
+
+
+def get_agents(file_path):
     agents = []
-    try:
-        with open(filename, 'r') as file:
-            for line in file:
-                if line.strip():
-                    agent_data = json.loads(line.strip())
-                    agents.append(Agent.from_dict(agent_data))
-    except IOError as e:
-        print(f"An error occurred: {e}")
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            agent = json.loads(line.strip())
+            agents.append(Agent.from_dict(agent))
+
     return agents
+

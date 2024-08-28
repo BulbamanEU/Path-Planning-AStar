@@ -9,6 +9,7 @@ def get_evaluated_position(obj):
     obj_eval = obj.evaluated_get(depsgraph)
     return obj_eval.matrix_world.translation
 
+
 def ellipsoids_collide(obj1, obj2):
     if obj1.type == 'MESH' and obj2.type == 'MESH':
         center1 = get_evaluated_position(obj1)
@@ -27,6 +28,7 @@ def ellipsoids_collide(obj1, obj2):
         return normalized_distance_squared <= (1.0 + radii2.x / radii1.x) ** 2
 
     return False
+
 
 def frame_change_handler(scene):
     colliding_agents = set()
@@ -54,6 +56,7 @@ def frame_change_handler(scene):
                 agent.data.materials.append(bpy.data.materials.get("collision"))
             else:
                 agent.data.materials.clear()
+
 
 bpy.app.handlers.frame_change_post.clear()
 bpy.app.handlers.frame_change_post.append(frame_change_handler)

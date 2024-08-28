@@ -2,8 +2,8 @@ import bpy
 from random_start_end import random_points, create_material
 from Agent_spawn import create_ellipsoid
 
-num_agents = 10
-rnge = 15
+num_agents = 20
+rnge = 20
 
 def delete_environment():
     bpy.ops.object.select_all(action='DESELECT')
@@ -14,8 +14,7 @@ def delete_environment():
 
 
 def new_environment():
-    agents = []
-    for material_name, color in [("start", (0, 1, 0)), ("end", (1, 0, 0))]:
+    for material_name, color in [("start", (0, 1, 0)), ("end", (1, 0, 0)), ("collision", (0.246, 0.069, 0.802))]:
         if material_name not in bpy.data.materials:
             create_material(material_name, color)
 
