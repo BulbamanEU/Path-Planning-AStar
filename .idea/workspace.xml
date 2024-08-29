@@ -4,29 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Saving start and end coordinates.">
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/data/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/modules/log_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/modules/random_start_end.py" afterDir="false" />
+    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Organized folder locations, made directories possible for any computer.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/Agent_spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/Agent_spawn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/CBS_collision.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/CBS_collision.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/add_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/add_scripts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/animation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/clear_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/clear_action.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/delete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/draw_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/draw_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/save_points.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/save_points.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/examples/values.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/get_coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/get_coordinates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/log_info.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/planAStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/planAStar3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/random_start_end.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/recreate_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/recreate_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/remove_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/remove_collection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/Agent_collision.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/Agent_collision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/BoundBox_collision.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/BoundBox_collision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/CBS_collision.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/CBS_collision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/Octree.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/Octree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/add_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/add_scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/data/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/blender/data/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/blender/examples/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/Agent_spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/Agent_spawn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/clear_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/clear_action.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/draw_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/draw_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/get_coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/get_coordinates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/log_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/log_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/planAStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/planAStar3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/random_start_end.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/random_start_end.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/remove_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/remove_collection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/modules/save_points.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/modules/save_points.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/recreate_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/recreate_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/reset_environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/blender/Blender_scripts/reset_environment.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,81 +71,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.3dAStar.executor": "Run",
-    "Python.AStar.executor": "Run",
-    "Python.AStar3D.executor": "Run",
-    "Python.AStarPygame.executor": "Run",
-    "Python.AStarTest.executor": "Run",
-    "Python.AStarVisual.executor": "Run",
-    "Python.AStartest.executor": "Run",
-    "Python.Agent_spawn.executor": "Run",
-    "Python.BLENDER_multi.executor": "Run",
-    "Python.CBS.executor": "Run",
-    "Python.CBS_GPT.executor": "Run",
-    "Python.ChatGPTTRY.executor": "Run",
-    "Python.DrawType.executor": "Run",
-    "Python.ECBS+GPT.executor": "Run",
-    "Python.FCL.executor": "Run",
-    "Python.GPT_testings.executor": "Run",
-    "Python.Grid.executor": "Run",
-    "Python.ILP_CBS.executor": "Run",
-    "Python.ILP_GPT.executor": "Run",
-    "Python.ILP_GPT_2.0.executor": "Run",
-    "Python.MultiAStarVisual.executor": "Run",
-    "Python.Octree.executor": "Run",
-    "Python.PulpGPT.executor": "Run",
-    "Python.SPARS.executor": "Run",
-    "Python.SPARS2.0.executor": "Run",
-    "Python.SPARSnew.executor": "Run",
-    "Python.SingleAStarVisual.executor": "Run",
-    "Python.UnlabelledPlanner.executor": "Run",
-    "Python.VPython_visualizer.executor": "Run",
-    "Python.another.executor": "Run",
-    "Python.bubbles.executor": "Run",
-    "Python.check collision.executor": "Run",
-    "Python.collision.executor": "Run",
-    "Python.collision_roadmap.executor": "Run",
-    "Python.constraints_test.executor": "Run",
-    "Python.geminiSPARS.executor": "Run",
-    "Python.git3dAStar.executor": "Run",
-    "Python.heapAStarVisual.executor": "Run",
-    "Python.manage_txt.executor": "Run",
-    "Python.moving_collision.executor": "Run",
-    "Python.octree with matplotlib.executor": "Run",
-    "Python.octreeAStar.executor": "Run",
-    "Python.octreeBOOM.executor": "Run",
-    "Python.octree_testing_internet.executor": "Run",
-    "Python.open3x.executor": "Run",
-    "Python.pyvista_test.executor": "Run",
-    "Python.quadraticProgram.executor": "Run",
-    "Python.quick_test.executor": "Run",
-    "Python.save_list.executor": "Run",
-    "Python.save_points.executor": "Run",
-    "Python.singleAStar.executor": "Run",
-    "Python.svm.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test_ompl.executor": "Run",
-    "Python.test_open3d.executor": "Run",
-    "Python.testing.executor": "Run",
-    "Python.trying.executor": "Run",
-    "Python.trying_collision.executor": "Run",
-    "Python.visualizer.executor": "Run",
-    "Python.wtf.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "SavingExamples",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Gintas/Documents/MANO IT/pathFinding/AStar/MultiAStar",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.3dAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStar3D.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStarPygame.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStarTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AStartest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Agent_spawn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BLENDER_multi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CBS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CBS_GPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ChatGPTTRY.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DrawType.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ECBS+GPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FCL.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GPT_testings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Grid.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ILP_CBS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ILP_GPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ILP_GPT_2.0.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MultiAStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Octree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PulpGPT.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SPARS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SPARS2.0.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SPARSnew.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SingleAStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.UnlabelledPlanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VPython_visualizer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.another.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bubbles.executor&quot;: &quot;Run&quot;,
+    &quot;Python.check collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collision_roadmap.executor&quot;: &quot;Run&quot;,
+    &quot;Python.constraints_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.geminiSPARS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.git3dAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.heapAStarVisual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage_txt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.moving_collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octree with matplotlib.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octreeAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octreeBOOM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.octree_testing_internet.executor&quot;: &quot;Run&quot;,
+    &quot;Python.open3x.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pyvista_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quadraticProgram.executor&quot;: &quot;Run&quot;,
+    &quot;Python.quick_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.save_points.executor&quot;: &quot;Run&quot;,
+    &quot;Python.singleAStar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.svm.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_ompl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_open3d.executor&quot;: &quot;Run&quot;,
+    &quot;Python.testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trying.executor&quot;: &quot;Run&quot;,
+    &quot;Python.trying_collision.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualizer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wtf.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SavingExamples&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gintas/Documents/MANO IT/pathFinding/AStar/MultiAStar&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar" />
@@ -152,11 +153,11 @@
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\blender" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\modules" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\data" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\blender" />
-      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\examples" />
-      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -367,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724915861086</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Organized folder locations, made directories possible for any computer.">
+      <option name="closed" value="true" />
+      <created>1724924996067</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724924996067</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -452,7 +461,8 @@
     <MESSAGE value="Logging actions for easier troubleshooting." />
     <MESSAGE value="Cleaning up code." />
     <MESSAGE value="Saving start and end coordinates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Saving start and end coordinates." />
+    <MESSAGE value="Organized folder locations, made directories possible for any computer." />
+    <option name="LAST_COMMIT_MESSAGE" value="Organized folder locations, made directories possible for any computer." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

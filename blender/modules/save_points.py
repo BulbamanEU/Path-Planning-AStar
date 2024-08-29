@@ -9,8 +9,7 @@ from get_coordinates import get_coords
 
 def write_to_file(data, file_name="values.json"):
     current_script_dir = os.path.dirname(__file__)
-    script_dir = os.path.abspath(os.path.join(current_script_dir, '..'))
-    file_path = os.path.join(script_dir, 'examples', file_name)
+    file_path = os.path.abspath(os.path.join(current_script_dir, '..', 'examples', file_name))
 
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
@@ -23,8 +22,7 @@ def write_to_file(data, file_name="values.json"):
 
 def read_from_file(file_name="values.json"):
     current_script_dir = os.path.dirname(__file__)
-    script_dir = os.path.abspath(os.path.join(current_script_dir, '..'))
-    file_path = os.path.join(script_dir, 'examples', file_name)
+    file_path = os.path.abspath(os.path.join(current_script_dir, '..', 'examples', file_name))
 
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
