@@ -2,7 +2,6 @@ import os
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import json
-
 from get_coordinates import get_coords
 
 
@@ -10,6 +9,7 @@ from get_coordinates import get_coords
 def write_to_file(data, file_name="values.json"):
     current_script_dir = os.path.dirname(__file__)
     file_path = os.path.abspath(os.path.join(current_script_dir, '..', 'examples', file_name))
+    print(file_path)
 
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
