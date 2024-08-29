@@ -1,10 +1,10 @@
 import sys
-sys.path.append(r'C:\Users\Gintas\Documents\MANO IT\pathFinding')
-from Blender_scripts.get_coordinates import get_coords
-from Blender_scripts.log_info import write_log
 import numpy as np
 from scipy.optimize import linear_sum_assignment
 import json
+
+sys.path.append(r'C:\Users\Gintas\Documents\MANO IT\pathFinding')
+from Blender_scripts.get_coordinates import get_coords
 
 
 

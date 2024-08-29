@@ -10,6 +10,8 @@ from delete import delete_object
 from log_info import write_log
 import numpy as np
 from scipy.optimize import linear_sum_assignment
+from examples.save_points import write_to_file
+
 
 def new_path(agent, n):
     start = agent.path[0]
@@ -49,6 +51,11 @@ def main():
     start = [start[i] for i in row_ind]
     goal = [goal[j] for j in col_ind]
 
+    data_to_save = {"start": start,
+                    "goal": goal}
+
+    write_to_file(data_to_save, loc_file)
+
     AStar = AStar3D()
     paths = []
 
@@ -67,7 +74,8 @@ def main():
 
 
 if __name__ == "__main__":
-    file_path = r"C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\test.json"
+    agent_file = r"C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\test.json"
+    loc_file = r"C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\examples\values.json"
     agents = []
     main()
-    save_agents(agents, file_path)
+    save_agents(agents, agent_file)
