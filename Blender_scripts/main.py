@@ -1,4 +1,3 @@
-import bpy
 from remove_collection import delete_collection
 from planAStar3D import AStar3D
 from get_coordinates import get_coords
@@ -10,7 +9,7 @@ from delete import delete_object
 from log_info import write_log
 import numpy as np
 from scipy.optimize import linear_sum_assignment
-from examples.save_points import write_to_file
+from save_points import write_to_file
 
 
 def new_path(agent, n):
@@ -74,8 +73,8 @@ def main():
 
 
 if __name__ == "__main__":
-    agent_file = r"C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\test.json"
-    loc_file = r"C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\examples\values.json"
+    agent_file = "test.json"
+    loc_file = "example.json"
     agents = []
     main()
     save_agents(agents, agent_file)

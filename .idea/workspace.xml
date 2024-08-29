@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Updates.">
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/Octree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/delete.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blender_scripts/test.json" afterDir="false" />
+    <list default="true" id="74a6e01c-6cfc-4ad2-b5bf-d3063f87f4ac" name="Changes" comment="Saving start and end coordinates.">
+      <change afterPath="$PROJECT_DIR$/Blender_scripts/data/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blender_scripts/modules/log_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blender_scripts/modules/random_start_end.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/AStar.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/AStar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" beforeDir="false" afterPath="$PROJECT_DIR$/AStar/SingleAStarVisual.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/Agent_spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/Agent_spawn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/Agent_spawn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/Agent_spawn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/CBS_collision.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/CBS_collision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/add_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/add_scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/animation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/clear_action.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/clear_action.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/draw_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/draw_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/save_points.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/save_points.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/examples/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/examples/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/get_coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/get_coordinates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/log_info.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Blender_scripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/planAStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/planAStar3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blender_scripts/random_start_end.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/random_start_end.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/planAStar3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/planAStar3D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/random_start_end.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Blender_scripts/recreate_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/recreate_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/remove_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blender_scripts/modules/remove_collection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blender_scripts/test.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +41,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="master" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -98,6 +110,7 @@
     "Python.geminiSPARS.executor": "Run",
     "Python.git3dAStar.executor": "Run",
     "Python.heapAStarVisual.executor": "Run",
+    "Python.manage_txt.executor": "Run",
     "Python.moving_collision.executor": "Run",
     "Python.octree with matplotlib.executor": "Run",
     "Python.octreeAStar.executor": "Run",
@@ -108,6 +121,7 @@
     "Python.quadraticProgram.executor": "Run",
     "Python.quick_test.executor": "Run",
     "Python.save_list.executor": "Run",
+    "Python.save_points.executor": "Run",
     "Python.singleAStar.executor": "Run",
     "Python.svm.executor": "Run",
     "Python.test.executor": "Run",
@@ -120,7 +134,7 @@
     "Python.wtf.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "SavingExamples",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Gintas/Documents/MANO IT/pathFinding/AStar/MultiAStar",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -138,11 +152,11 @@
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\modules" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\data" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\blender" />
+      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\examples" />
       <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar" />
-      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\3D_AStar" />
-      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding" />
-      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\MultiAStar" />
-      <recent name="C:\Users\Gintas\Documents\MANO IT\pathFinding\AStar\tkinterGrid" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -305,7 +319,55 @@
       <option name="project" value="LOCAL" />
       <updated>1724239901417</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated with agent class and write/read to json file. Trying to implement CBS with low-level A*.">
+      <option name="closed" value="true" />
+      <created>1724768768679</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724768768679</updated>
+    </task>
+    <task id="LOCAL-00020" summary="CBS collision avoidance. Just changes one of the paths.">
+      <option name="closed" value="true" />
+      <created>1724847548945</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724847548945</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Logging actions for easier troubleshooting.">
+      <option name="closed" value="true" />
+      <created>1724847762272</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724847762272</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Cleaning up code.">
+      <option name="closed" value="true" />
+      <created>1724847821582</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724847821582</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Saving start and end coordinates.">
+      <option name="closed" value="true" />
+      <created>1724853213256</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724853213256</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Saving start and end coordinates.">
+      <option name="closed" value="true" />
+      <created>1724915861086</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724915861086</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -349,7 +411,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="SavingExamples" />
                       </list>
                     </value>
                   </entry>
@@ -385,7 +447,12 @@
     <MESSAGE value="Collision for ellipsoids while moving." />
     <MESSAGE value="Collision checking for agents while in animation." />
     <MESSAGE value="Updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates." />
+    <MESSAGE value="Updated with agent class and write/read to json file. Trying to implement CBS with low-level A*." />
+    <MESSAGE value="CBS collision avoidance. Just changes one of the paths." />
+    <MESSAGE value="Logging actions for easier troubleshooting." />
+    <MESSAGE value="Cleaning up code." />
+    <MESSAGE value="Saving start and end coordinates." />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving start and end coordinates." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

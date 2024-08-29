@@ -1,14 +1,14 @@
 import bpy
 import mathutils
 from main import new_path
-from Agent_spawn import Agent, get_agents
+from Agent_spawn import get_agents
 from log_info import write_log
 
 num_agents = 20
 
 #read from json file
-file_path = r"C:\Users\Gintas\Documents\MANO IT\pathFinding\Blender_scripts\test.json"
-agents = get_agents(file_path)
+file_name = "test.json"
+agents = get_agents(file_name)
 
 
 

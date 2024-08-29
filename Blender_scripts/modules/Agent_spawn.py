@@ -1,5 +1,6 @@
 import bpy
 import json
+import os
 
 
 class Agent:
@@ -33,7 +34,12 @@ def create_ellipsoid(location, scale, n):
     obj.name = f"Agent{n}"
 
 
-def save_agents(agents, file_path):
+def save_agents(agents, file_name):
+    current_script_dir = os.path.dirname(__file__)
+    script_dir = os.path.abspath(os.path.join(current_script_dir, '..'))
+    file_path = os.path.join(script_dir, 'data', file_name)
+
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
     with open(file_path, 'w') as f:
         for agent in agents:
@@ -42,7 +48,13 @@ def save_agents(agents, file_path):
             f.write('\n')
 
 
-def get_agents(file_path):
+def get_agents(file_name="test.json"):
+    current_script_dir = os.path.dirname(__file__)
+    script_dir = os.path.abspath(os.path.join(current_script_dir, '..'))
+    file_path = os.path.join(script_dir, 'data', file_name)
+
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
     agents = []
 
     with open(file_path, 'r') as file:
