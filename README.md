@@ -23,3 +23,5 @@
 <p>5) Can run the animation.</p>
 <p>6) Running Agent_collision.py shows which agents collide in the animation. CBS_collision.py is still under development but it should replan the path when agents collision is detected (Blender might stop responding if agents collide in their start or end locations).</p>
 
+NOTE: if blender takes too long or stops working multiple times after running main.py it might need to make step_size inside modules/planAStar3D.py to a higher number.
+
