@@ -1,7 +1,8 @@
 import bpy
-from random_start_end import random_points, create_material
+from random_start_end import random_points, create_material, saved_points
 from Agent_spawn import create_ellipsoid
 from save_points import read_from_file
+from log_info import write_log
 
 num_agents = 20
 rnge = 20
@@ -29,12 +30,14 @@ def new_environment(read_from_example):
 
     if read_from_example:
         start, goal, num_agents_f = read_from_file(read_from_example)
+        write_log(f"start locs: {start}")
+        write_log(f"goal locs: {goal}")
         for n in range(1, num_agents_f + 1):
-            loc = random_points(n, rnge, start_points, goal_points, min_distance)
+            saved_points(n, start[n-1], goal[n-1])
             create_ellipsoid((0, 0, 0), (x_scale, y_scale, z_scale), n)
     else:
         for n in range(1, num_agents + 1):
-            start_loc, goal_loc = random_points(n, rnge, start_points, goal_points, min_distance)
+            random_points(n, rnge, start_points, goal_points, min_distance)
             create_ellipsoid((0,0,0), (x_scale, y_scale, z_scale), n)
 
 

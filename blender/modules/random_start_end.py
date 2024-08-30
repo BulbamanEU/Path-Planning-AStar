@@ -63,4 +63,17 @@ def random_points(n, rnge, start_points, goal_points, min_distance):
         goal.data.materials.append(material)
     goal_points.append(goal_location)
 
-    return start_location, goal_location
+def saved_points(n, s_loc, g_loc):
+    bpy.ops.mesh.primitive_uv_sphere_add(location=s_loc)
+    start = bpy.context.object
+    start.name = f"start{n}"
+    material = bpy.data.materials.get("start")
+    if material:
+        start.data.materials.append(material)
+
+    bpy.ops.mesh.primitive_uv_sphere_add(location=g_loc)
+    goal = bpy.context.object
+    goal.name = f"end{n}"
+    material = bpy.data.materials.get("end")
+    if material:
+        goal.data.materials.append(material)

@@ -7,6 +7,4 @@ script_dir = os.path.abspath(os.path.join(current_script_dir, '..', 'Blender_scr
 modules_dir = os.path.abspath(os.path.join(current_script_dir, '..', 'modules'))
 
 sys.path.append(script_dir)
-print(script_dir)
-print(modules_dir)
 sys.path.append(modules_dir)
