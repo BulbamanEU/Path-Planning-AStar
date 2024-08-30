@@ -1,7 +1,7 @@
 import bpy
 import mathutils
 
-num_agents = 20
+num_agents = 50
 
 
 def get_evaluated_position(obj):

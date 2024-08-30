@@ -8,7 +8,7 @@ num_agents = 50
 rnge = 50
 
 read_from_example = False # change to .txt file to visualize
-read_from_example = "example_test_2.json"
+# read_from_example = "example_test_2.json"
 
 def delete_environment():
     bpy.ops.object.select_all(action='DESELECT')

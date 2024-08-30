@@ -4,7 +4,7 @@ from main import new_path
 from Agent_spawn import get_agents
 from log_info import write_log
 
-num_agents = 20
+num_agents = 50
 
 #read from json file
 file_name = "test.json"
