@@ -19,6 +19,8 @@ class AStar3D:
         start_node = Node(position=tuple(start))  # Convert start position to a tuple
         end_node = Node(position=tuple(end))  # Convert end position to a tuple
 
+        step_size = 0.25
+
         open_list = []
         closed_list = set()
         open_dict = {}
@@ -45,9 +47,9 @@ class AStar3D:
                                  (-1, -1, -1), (-1, -1, 1), (-1, 1, -1), (-1, 1, 1),
                                  (1, -1, -1), (1, -1, 1), (1, 1, -1), (1, 1, 1)]:
 
-                node_position = (current_node.position[0] + new_position[0],
-                                 current_node.position[1] + new_position[1],
-                                 current_node.position[2] + new_position[2])
+                node_position = (current_node.position[0] + new_position[0]*step_size,
+                                 current_node.position[1] + new_position[1]*step_size,
+                                 current_node.position[2] + new_position[2]*step_size)
 
                 if node_position in closed_list:
                     continue

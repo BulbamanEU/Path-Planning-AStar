@@ -4,11 +4,11 @@ from Agent_spawn import create_ellipsoid
 from save_points import read_from_file
 from log_info import write_log
 
-num_agents = 20
-rnge = 20
+num_agents = 50
+rnge = 50
 
 read_from_example = False # change to .txt file to visualize
-# read_from_example = r".txt"
+read_from_example = "example_test_2.json"
 
 def delete_environment():
     bpy.ops.object.select_all(action='DESELECT')
