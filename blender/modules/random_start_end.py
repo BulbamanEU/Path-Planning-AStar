@@ -77,3 +77,32 @@ def saved_points(n, s_loc, g_loc):
     material = bpy.data.materials.get("end")
     if material:
         goal.data.materials.append(material)
+
+def grid_formation(num_agents, spacing):
+    locations = []
+    size = int(num_agents**0.5) + 1
+    for i in range(size):
+        for j in range(size):
+            if len(locations) < num_agents:
+                locations.append((i * spacing, j * spacing, 5))
+    return locations
+
+def draw_points(num_agents, spacing):
+    loc = grid_formation(num_agents, spacing)
+    n=1
+
+    for location in loc:
+        bpy.ops.mesh.primitive_uv_sphere_add(location=location)
+        start = bpy.context.object
+        start.name = f"start{n}"
+        material = bpy.data.materials.get("start")
+        if material:
+            start.data.materials.append(material)
+        n += 1
+
+
+def points(num_agents, spacing, n, rnge, start_points, goal_points, formation="random"):
+    if formation == "random":
+        random_points(n, rnge, start_points, goal_points)
+    if formation == "grid":
+        grid_formation(num_agents, spacing)

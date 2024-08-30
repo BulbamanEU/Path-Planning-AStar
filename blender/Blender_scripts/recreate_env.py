@@ -1,5 +1,5 @@
 import bpy
-from random_start_end import random_points, create_material, saved_points
+from random_start_end import random_points, create_material, saved_points, draw_points
 from Agent_spawn import create_ellipsoid
 from save_points import read_from_file
 from log_info import write_log
@@ -36,8 +36,9 @@ def new_environment(read_from_example):
             saved_points(n, start[n-1], goal[n-1])
             create_ellipsoid((0, 0, 0), (x_scale, y_scale, z_scale), n)
     else:
+        draw_points(50, 3)
         for n in range(1, num_agents + 1):
-            random_points(n, rnge, start_points, goal_points, min_distance)
+            #random_points(n, rnge, start_points, goal_points, min_distance)
             create_ellipsoid((0,0,0), (x_scale, y_scale, z_scale), n)
 
 

@@ -16,11 +16,11 @@ def new_path(agent, n):
     start = agent.path[0]
     goal = agent.path[-1]
 
-    write_log(f"Planning A* algorithm for {n} named {agent.name}")
+    write_log(f"Planning A* algorithm for {agent.name}")
     write_log(f"Starting: {start} \nGoal: {goal}")
 
     obstacles = agent.obstacles
-    write_log(f"Agent obstacles: {agent.obstacles}")
+    write_log(f"Agent obstacles: {obstacles}")
     AStar = AStar3D()
 
     path = AStar.plan(start, goal, obstacles)
