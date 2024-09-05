@@ -1,6 +1,7 @@
 import bpy
 import random
 import numpy as np
+import math
 
 
 def create_material(material_name, color):
@@ -78,17 +79,28 @@ def saved_points(n, s_loc, g_loc):
     if material:
         goal.data.materials.append(material)
 
-def grid_formation(num_agents, spacing):
+def hor_grid_formation(num_agents, spacing, height):
     locations = []
     size = int(num_agents**0.5) + 1
     for i in range(size):
         for j in range(size):
             if len(locations) < num_agents:
-                locations.append((i * spacing, j * spacing, 5))
+                locations.append((i * spacing, j * spacing, height))
     return locations
 
-def draw_points(num_agents, spacing):
-    loc = grid_formation(num_agents, spacing)
+def ver_grid_formation(num_agents, spacing):
+    locations = []
+    size = int(num_agents**0.5) + 1
+    for i in range(size):
+        for j in range(size):
+            if len(locations) < num_agents:
+                locations.append((5, i * spacing, j * spacing))
+    return locations
+
+def draw_points(num_agents, radius):
+    height = 5
+    loc = generate_spiral_formation(num_agents, radius, height)
+    print(loc)
     n=1
 
     for location in loc:
@@ -101,8 +113,38 @@ def draw_points(num_agents, spacing):
         n += 1
 
 
-def points(num_agents, spacing, n, rnge, start_points, goal_points, formation="random"):
-    if formation == "random":
-        random_points(n, rnge, start_points, goal_points)
-    if formation == "grid":
-        grid_formation(num_agents, spacing)
+def generate_spiral_formation(num_agents, initial_radius, growth_rate):
+    locations = []
+    for i in range(num_agents):
+        angle = i * 0.1  # Adjust the step to control the tightness of the spiral
+        radius = initial_radius + i * growth_rate
+        x = radius * math.cos(angle)
+        y = radius * math.sin(angle)
+        z =
+        locations.append((x, y, 0))
+    return locations
+
+def generate_diamond_formation(num_agents, spacing, height):
+    locations = []
+    layer = 0
+
+    while len(locations) < num_agents:
+        layer += 1
+        # Top and bottom layers of the diamond
+        for i in range(-layer, layer + 1):
+            for j in range(-layer, layer + 1):
+                if abs(i) + abs(j) == layer and len(locations) < num_agents:
+                    locations.append((i * spacing, j * spacing, height))
+
+    return locations
+
+
+def generate_circle_formation(num_agents, radius):
+    locations = []
+    angle_step = 2 * math.pi / num_agents
+    for i in range(num_agents):
+        angle = i * angle_step
+        y = radius * math.cos(angle)
+        z = radius * math.sin(angle) + radius + 10
+        locations.append((radius+10, y, z))
+    return locations

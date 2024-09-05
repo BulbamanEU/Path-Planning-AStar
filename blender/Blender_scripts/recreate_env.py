@@ -7,8 +7,8 @@ from log_info import write_log
 num_agents = 50
 rnge = 50
 
-read_from_example = False # change to .txt file to visualize
 # read_from_example = "example_test_2.json"
+read_from_example = False # change to comment to visualize from file
 
 def delete_environment():
     bpy.ops.object.select_all(action='DESELECT')
@@ -36,7 +36,7 @@ def new_environment(read_from_example):
             saved_points(n, start[n-1], goal[n-1])
             create_ellipsoid((0, 0, 0), (x_scale, y_scale, z_scale), n)
     else:
-        draw_points(50, 3)
+        draw_points(50, 5)
         for n in range(1, num_agents + 1):
             #random_points(n, rnge, start_points, goal_points, min_distance)
             create_ellipsoid((0,0,0), (x_scale, y_scale, z_scale), n)

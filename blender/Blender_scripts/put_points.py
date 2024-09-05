@@ -1,78 +1,78 @@
 import bpy
+import random
+import math
 
-calculating = True
-num = 0
+def calculate_start():
+    calculating = True
+    num = 0
 
-while calculating:
-    if bpy.data.objects.get(f"start{num+1}"):
-        num += 1
-    else:
-        calculating = False
+    while calculating:
+        if bpy.data.objects.get(f"start{num+1}"):
+            num += 1
+        else:
+            calculating = False
+
+    for n in range(num):
+        start = bpy.data.objects.get(f"start{n+1}")
+        # 0 - x, 1 - y, 2 - z
+        start.location[0] = 50
+
+    return num
 
 
-d = 3
-rnge = 50
-
-for n in range(num):
-    start = bpy.data.objects.get(f"start{n+1}")
-    # 0 - x, 1 - y, 2 - z
-    start.location[0] = 50
-
-
-def grid_formation(num_agents, spacing):
+def grid_formation(num_agents, spacing, height, orientation="horizontal"):
     locations = []
-    size = int(num_agents**0.5) + 1
+    size = int(num_agents**0.5) # + 1
     for i in range(size):
         for j in range(size):
             if len(locations) < num_agents:
-                locations.append((i * spacing, j * spacing, 5))
+                if orientation == "horizontal":
+                    locations.append((i * spacing, j * spacing, height))
+                else:
+                    locations.append((height, i * spacing, j * spacing))
     return locations
 
-def generate_line_formation(num_agents, spacing, orientation='horizontal'):
+def generate_line_formation(num_agents, spacing, height, orientation='horizontal'):
     locations = []
     for i in range(num_agents):
         if orientation == 'horizontal':
-            locations.append((i * spacing, 0, 0))
+            locations.append((i * spacing, 0, height))
         else:
-            locations.append((0, i * spacing, 0))
+            locations.append((height, 0, i * spacing))
     return locations
-
-
-import math
 
 def generate_circle_formation(num_agents, radius):
     locations = []
     angle_step = 2 * math.pi / num_agents
     for i in range(num_agents):
         angle = i * angle_step
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        locations.append((x, y, 0))
+        y = radius * math.cos(angle)
+        z = radius * math.sin(angle) + radius + 10
+        locations.append((radius+10, y, z))
     return locations
 
-import random
-
-def generate_random_scatter(num_agents, range_x, range_y):
+def generate_random_scatter(num_agents, range_x, range_y, range_z):
     locations = []
     for _ in range(num_agents):
         x = random.uniform(0, range_x)
         y = random.uniform(0, range_y)
-        locations.append((x, y, 0))
+        z = random.uniform(0, range_z)
+        locations.append((x, y, z))
     return locations
 
-def generate_diamond_formation(num_agents, spacing):
+def generate_diamond_formation(num_agents, spacing, height):
     locations = []
     n = int((num_agents + 1) / 2)
     for i in range(n):
         for j in range(n - i):
             if len(locations) < num_agents:
-                locations.append((i * spacing, j * spacing, 0))
+                locations.append((i * spacing, j * spacing, height))
                 if len(locations) < num_agents:
-                    locations.append((-i * spacing, j * spacing, 0))
+                    locations.append((-i * spacing, j * spacing, height))
                     if len(locations) < num_agents:
-                        locations.append((i * spacing, -j * spacing, 0))
+                        locations.append((i * spacing, -j * spacing, height))
                         if len(locations) < num_agents:
-                            locations.append((-i * spacing, -j * spacing, 0))
+                            locations.append((-i * spacing, -j * spacing, height))
     return locations
 
 def generate_spiral_formation(num_agents, initial_radius, growth_rate):
@@ -105,9 +105,6 @@ def generate_rectangle_formation(num_agents, rows, cols, spacing):
             if len(locations) < num_agents:
                 locations.append((i * spacing, j * spacing, 0))
     return locations
-
-
-import bpy
 
 
 def create_cube_formation(cube_size=2, spacing=2):
