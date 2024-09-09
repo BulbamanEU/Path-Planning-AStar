@@ -3,6 +3,54 @@ import random
 import numpy as np
 import math
 
+NUM_AGENTS = 50
+SPACING = 3
+OFFSET = 10
+
+RADIUS = 60
+
+INITIAL_RADIUS = 4
+GROWTH_RATE = 2
+H_GROWTH_RATE = 2
+
+
+def select_formation(formation):
+
+    locations = []
+
+    #if formation == "random_points":
+        # random_points()
+
+    if formation == "hor_grid_formation":
+        locations = hor_grid_formation(NUM_AGENTS, SPACING, OFFSET + random.randint(-10, 10))
+
+    if formation == "ver_grid_formation":
+        locations = ver_grid_formation(NUM_AGENTS, SPACING+2, OFFSET + random.randint(-10, 10))
+
+    if formation == "spiral_formation":
+        locations = spiral_formation(NUM_AGENTS, INITIAL_RADIUS, GROWTH_RATE, H_GROWTH_RATE)
+
+    if formation == "diamond_formation":
+        locations = diamond_formation(NUM_AGENTS, SPACING, OFFSET)
+
+    if formation == "circle_formation":
+        locations = circle_formation(NUM_AGENTS, RADIUS)
+
+    return locations
+
+
+def draw_points(locations, type):
+    n = 1
+
+    for loc in locations:
+        bpy.ops.mesh.primitive_uv_sphere_add(location=loc)
+        point = bpy.context.object
+        point.name = type + str(n)
+        material = bpy.data.materials.get(type)
+        if material:
+            point.data.materials.append(material)
+        n += 1
+
 
 def create_material(material_name, color):
     if material_name in bpy.data.materials:
@@ -37,6 +85,7 @@ def is_far_enough(new_point, points, min_distance):
             return False
     return True
 
+
 def generate_non_colliding_point(existing_points, rnge, min_distance):
     while True:
         new_point = (random.randint(0, rnge), random.randint(0, rnge), random.randint(0, rnge))
@@ -64,6 +113,7 @@ def random_points(n, rnge, start_points, goal_points, min_distance):
         goal.data.materials.append(material)
     goal_points.append(goal_location)
 
+
 def saved_points(n, s_loc, g_loc):
     bpy.ops.mesh.primitive_uv_sphere_add(location=s_loc)
     start = bpy.context.object
@@ -79,52 +129,51 @@ def saved_points(n, s_loc, g_loc):
     if material:
         goal.data.materials.append(material)
 
-def hor_grid_formation(num_agents, spacing, height):
+
+def hor_grid_formation(num_agents, spacing, offset):
     locations = []
     size = int(num_agents**0.5) + 1
     for i in range(size):
         for j in range(size):
             if len(locations) < num_agents:
-                locations.append((i * spacing, j * spacing, height))
+                locations.append((i * spacing, j * spacing, offset))
     return locations
 
-def ver_grid_formation(num_agents, spacing):
+
+def ver_grid_formation(num_agents, spacing, offset):
     locations = []
     size = int(num_agents**0.5) + 1
     for i in range(size):
         for j in range(size):
             if len(locations) < num_agents:
-                locations.append((5, i * spacing, j * spacing))
+                locations.append((offset, i * spacing, j * spacing))
     return locations
 
-def draw_points(num_agents, radius):
-    height = 5
-    loc = generate_spiral_formation(num_agents, radius, height)
-    print(loc)
-    n=1
 
-    for location in loc:
-        bpy.ops.mesh.primitive_uv_sphere_add(location=location)
-        start = bpy.context.object
-        start.name = f"start{n}"
-        material = bpy.data.materials.get("start")
-        if material:
-            start.data.materials.append(material)
-        n += 1
+#def spiral_formation(num_agents, initial_radius, growth_rate):
+#    locations = []
+#    for i in range(num_agents):
+#        angle = i * 0.1  # Adjust the step to control the tightness of the spiral
+#        radius = initial_radius + i * growth_rate
+#        x = radius * math.cos(angle)
+#        y = radius * math.sin(angle)
+#        # z =
+#        locations.append((x, y, 0))
+#    return locations
 
-
-def generate_spiral_formation(num_agents, initial_radius, growth_rate):
+def spiral_formation(num_agents, initial_radius, growth_rate, height_growth_rate):
     locations = []
     for i in range(num_agents):
-        angle = i * 0.1  # Adjust the step to control the tightness of the spiral
+        angle = i * 0.1  # Controls the tightness of the spiral
         radius = initial_radius + i * growth_rate
         x = radius * math.cos(angle)
         y = radius * math.sin(angle)
-        z =
-        locations.append((x, y, 0))
+        z = i * height_growth_rate  # Increasing the Z-axis value gradually to create the spiral's height
+        locations.append((x, y, z))
     return locations
 
-def generate_diamond_formation(num_agents, spacing, height):
+
+def diamond_formation(num_agents, spacing, offset):
     locations = []
     layer = 0
 
@@ -134,17 +183,17 @@ def generate_diamond_formation(num_agents, spacing, height):
         for i in range(-layer, layer + 1):
             for j in range(-layer, layer + 1):
                 if abs(i) + abs(j) == layer and len(locations) < num_agents:
-                    locations.append((i * spacing, j * spacing, height))
+                    locations.append((i * spacing, j * spacing, offset))
 
     return locations
 
 
-def generate_circle_formation(num_agents, radius):
+def circle_formation(num_agents, radius):
     locations = []
     angle_step = 2 * math.pi / num_agents
     for i in range(num_agents):
         angle = i * angle_step
         y = radius * math.cos(angle)
         z = radius * math.sin(angle) + radius + 10
-        locations.append((radius+10, y, z))
+        locations.append((radius + 10, y, z))
     return locations

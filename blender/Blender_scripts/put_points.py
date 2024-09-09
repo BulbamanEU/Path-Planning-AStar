@@ -2,6 +2,11 @@ import bpy
 import random
 import math
 
+SPACING = 1
+HEIGHT = 1
+RADIUS = 1
+
+
 def calculate_start():
     calculating = True
     num = 0
@@ -32,7 +37,7 @@ def grid_formation(num_agents, spacing, height, orientation="horizontal"):
                     locations.append((height, i * spacing, j * spacing))
     return locations
 
-def generate_line_formation(num_agents, spacing, height, orientation='horizontal'):
+def generate_line_formation(num_agents, spacing, height, orientation="horizontal"):
     locations = []
     for i in range(num_agents):
         if orientation == 'horizontal':
