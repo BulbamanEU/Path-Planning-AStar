@@ -1,15 +1,28 @@
 import bpy
 import mathutils
 from main import new_path
+from animation import no_rotation, adjust_path_after_collision
 from Agent_spawn import get_agents
 from log_info import write_log
 
-num_agents = 50
+num_agents = 25
 
-#read from json file
 file_name = "test.json"
 agents = get_agents(file_name)
 
+
+def are_vectors_equal(vec1, vec2, threshold=0.05):
+    return abs(vec1[0]-vec2[0]) <= threshold and abs(vec1[1]-vec2[1])<=threshold and abs(vec1[2]-vec2[2])<=threshold
+
+
+def add_obstacle(agent, obstacle, n):
+    if are_vectors_equal(obstacle, agent.path[0]) or are_vectors_equal(obstacle, agent.path[-1]):
+        pass
+    else:
+        agent.obstacles.append(obstacle)
+        new_path(agent, n)
+
+    return agent
 
 
 def get_evaluated_position(obj):
@@ -51,23 +64,24 @@ def frame_change_handler(scene):
             if agent1 and agent2:
                 collision = ellipsoids_collide(agent1, agent2)
                 if collision:
-                    write_log(f"Collision detected between {agent1.name} and {agent2.name} at frame {scene.frame_current}")
+                    write_log(f"Collision detected between {agent1.name} and {agent2.name}"
+                              f" at frame {scene.frame_current}")
                     colliding_agents.add(agent1)
                     colliding_agents.add(agent2)
-                    write_log(str(get_evaluated_position(agent1)))
+
+                    bpy.ops.screen.animation_play()
 
                     obstacle = tuple(int(coord) for coord in get_evaluated_position(agent1))
                     write_log(f"Obstacles are: {obstacle}")
-
-                    agents[i-1].obstacles.append(obstacle)
+                    agents[i-1] = add_obstacle(agents[i - 1], obstacle, i)
                     bpy.ops.screen.animation_cancel(restore_frame=False)
-                    new_path(agents[i-1], i)
-                    write_log("Replanned A* path.")
-                    bpy.ops.screen.animation_play()
 
-                    #obstacle = get_evaluated_position(agent2)
-                    #agents[j].obstacles.append(obstacle)
-                    #new_path(agents[j], j)
+                    obstacle = tuple(int(coord) for coord in get_evaluated_position(agent2))
+                    write_log(f"Obstacles are: {obstacle}")
+                    agents[j-1] = add_obstacle(agents[j - 1], obstacle, j)
+                    bpy.ops.screen.animation_cancel(restore_frame=False)
+
+                    bpy.ops.screen.animation_play()
 
             else:
                 write_log(f"Agent not found: Agent{i} or Agent{j}")

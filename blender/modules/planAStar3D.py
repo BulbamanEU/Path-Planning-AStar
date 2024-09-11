@@ -15,11 +15,9 @@ class Node:
         return self.position == other.position
 
 class AStar3D:
-    def plan(self, start, end, obstacles):
+    def plan(self, start, end, obstacles, step_size):
         start_node = Node(position=tuple(start))  # Convert start position to a tuple
         end_node = Node(position=tuple(end))  # Convert end position to a tuple
-
-        step_size = 0.25
 
         open_list = []
         closed_list = set()
