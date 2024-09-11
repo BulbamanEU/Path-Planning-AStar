@@ -41,23 +41,3 @@ def no_rotation(n, max_speed=5):
     else:
         print(f"Agent or Path not found for index {n}: {agent_name}, {path_name}")
 
-
-def adjust_path_after_collision(agent, collision_frame, stop_duration=20):
-    """ Slows down or stops the agent for `stop_duration` frames after a collision. """
-
-    # Retrieve the agent's Follow Path constraint
-    follow_path_constraint = next((c for c in agent.constraints if c.type == 'FOLLOW_PATH'), None)
-
-    if follow_path_constraint:
-        # Pause the agent by keeping the offset_factor constant during the stop_duration
-        current_offset = follow_path_constraint.offset_factor
-
-        for i in range(stop_duration):
-            # Set keyframe to maintain the current position
-            agent.keyframe_insert(data_path="constraints[\"Follow Path\"].offset_factor", frame=collision_frame + i,
-                                  value=current_offset)
-
-        # Resume the agent after the stop duration
-        agent.keyframe_insert(data_path="constraints[\"Follow Path\"].offset_factor",
-                              frame=collision_frame + stop_duration)
-
