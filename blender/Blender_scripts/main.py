@@ -53,7 +53,7 @@ def main():
     data_to_save = {"start": start,
                     "goal": goal}
 
-    write_to_file(data_to_save, loc_file)
+    # write_to_file(data_to_save, loc_file)
 
     AStar = AStar3D()
     paths = []
@@ -74,7 +74,7 @@ def main():
 
 if __name__ == "__main__":
     agent_file = "test.json"
-    loc_file = "example.json"
+    # loc_file = "example.json"
     agents = []
     main()
     save_agents(agents, agent_file)
