@@ -3,7 +3,6 @@ import random
 import numpy as np
 import math
 
-NUM_AGENTS = 50
 SPACING = 3
 OFFSET = 10
 
@@ -14,7 +13,7 @@ GROWTH_RATE = 3
 H_GROWTH_RATE = 0.6
 
 
-def select_formation(formation):
+def select_formation(formation, NUM_AGENTS):
 
     locations = []
 

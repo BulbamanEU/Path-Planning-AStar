@@ -8,6 +8,7 @@ class Agent:
         self.name = name
         self.path = path if path is not None else []
         self.obstacles = obstacles if obstacles is not None else []
+        self.constraints = []
 
     def to_dict(self):
         return {

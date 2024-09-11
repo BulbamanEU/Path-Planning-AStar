@@ -4,10 +4,10 @@ from Agent_spawn import create_ellipsoid
 from save_points import read_from_file
 from log_info import write_log
 
-num_agents = 50
+num_agents = 25
 FORMATIONS = ["random_points", "hor_grid_formation", "ver_grid_formation",
               "spiral_formation", "diamond_formation", "circle_formation"]
-s_formation = FORMATIONS[1]
+s_formation = FORMATIONS[0]
 g_formation = FORMATIONS[3]
 rnge = 50
 
@@ -40,10 +40,10 @@ def spawning():
     start_points = []
     goal_points = []
 
-    start_points = select_formation(s_formation)
+    start_points = select_formation(s_formation, num_agents)
     draw_points(start_points, "start")
 
-    goal_points = select_formation(g_formation)
+    goal_points = select_formation(g_formation, num_agents)
     draw_points(goal_points, "end")
 
     for n in range(len(start_points)):
